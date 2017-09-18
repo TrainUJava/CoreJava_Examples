@@ -1,0 +1,4 @@
+Name	Sal
+aaa	12000
+bbb	23000
+ccc	45000

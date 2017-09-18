@@ -1,0 +1,40 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+    <description>Empty web.xml file for Web Application</description>
+    <servlet>
+        <servlet-name>Session1</servlet-name>
+        <servlet-class>example.servlets.Session1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Session2</servlet-name>
+        <servlet-class>example.servlets.Session2</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Session3</servlet-name>
+        <servlet-class>example.servlets.Session3</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Session1</servlet-name>
+        <url-pattern>/servlet/session1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Session2</servlet-name>
+        <url-pattern>/servlet/session2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Session3</servlet-name>
+        <url-pattern>/servlet/session3</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>35</session-timeout>
+    </session-config>
+    <mime-mapping>
+        <extension>html</extension>
+        <mime-type>text/html</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>txt</extension>
+        <mime-type>text/plain</mime-type>
+    </mime-mapping>
+</web-app>

@@ -1,0 +1,92 @@
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+
+
+  <servlet>
+    <servlet-name>f</servlet-name>
+    <servlet-class>FCookie</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet>
+    <servlet-name>ff</servlet-name>
+    <servlet-class>FFCookie</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet>
+    <servlet-name>m</servlet-name>
+    <servlet-class>MCookie</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet>
+    <servlet-name>r</servlet-name>
+    <servlet-class>RCookie</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet>
+    <servlet-name>sf</servlet-name>
+    <servlet-class>SFCookie</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>r</servlet-name>
+    <url-pattern>/RCookie</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>m</servlet-name>
+    <url-pattern>/MCookie</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>f</servlet-name>
+    <url-pattern>/FCookie</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>sf</servlet-name>
+    <url-pattern>/SFCookie</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>ff</servlet-name>
+    <url-pattern>/FFCookie</url-pattern>
+  </servlet-mapping>
+
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+  </welcome-file-list>
+
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>My secure resources</web-resource-name>
+      <description>Resources to be placed under security control.</description>
+      <url-pattern>/private/*</url-pattern>
+      <url-pattern>/registered/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>guest</role-name>
+    </auth-constraint>
+    <user-data-constraint>
+      <transport-guarantee>NONE</transport-guarantee>
+    </user-data-constraint>
+  </security-constraint>
+
+  <login-config>
+    <auth-method>BASIC</auth-method>
+    <realm-name>WebApp</realm-name>
+  </login-config>
+
+  <security-role>
+    <description>The role allowed to access our content</description>
+    <role-name>guest</role-name>
+  </security-role>
+
+</web-app>

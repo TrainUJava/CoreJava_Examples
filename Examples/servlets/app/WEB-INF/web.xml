@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+	<servlet>
+		<servlet-name>abc</servlet-name>
+		<servlet-class>HelloServlet</servlet-class>
+	</servlet>
+<servlet>
+		<servlet-name>included</servlet-name>
+		<servlet-class>Included</servlet-class>
+	</servlet>
+<servlet>
+		<servlet-name>including</servlet-name>
+		<servlet-class>Including</servlet-class>
+	</servlet>
+	<servlet-mapping>
+			<servlet-name>abc</servlet-name>
+			<url-pattern>/servlet/hello</url-pattern>
+	</servlet-mapping>
+<servlet-mapping>
+			<servlet-name>included</servlet-name>
+			<url-pattern>/Included</url-pattern>
+	</servlet-mapping>
+<servlet-mapping>
+			<servlet-name>including</servlet-name>
+			<url-pattern>/Including</url-pattern>
+	</servlet-mapping>
+</web-app>
